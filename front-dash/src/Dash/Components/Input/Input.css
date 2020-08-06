@@ -1,0 +1,9 @@
+.formInput {
+  border: none;
+  padding: 15px;
+  border-radius: 1px;
+  background-color: rgba(78, 78, 78, 0.09);
+  width: 100%;
+  box-sizing: border-box;
+  outline: indianred;
+}

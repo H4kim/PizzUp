@@ -1,0 +1,36 @@
+.container {
+  margin-left: 340px;
+  width: 100vw;
+  padding: 190px 110px;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #54cadab4;
+  padding: 10px 30px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000000;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.formInput {
+  border: none;
+  padding: 10px;
+  border-radius: 1px;
+  background-color: rgba(78, 78, 78, 0.09);
+  width: 300px;
+  height: 100%;
+  box-sizing: border-box;
+  outline: indianred;
+}

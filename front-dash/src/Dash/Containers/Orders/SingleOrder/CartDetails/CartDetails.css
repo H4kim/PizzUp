@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.header {
+  background-color: #3797a4a6;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid white;
+  font-weight: 700;
+}
+
+.row {
+  background-color: #3797a4;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+.box {
+  border-right: 1px solid rgb(246, 246, 246);
+  width: 33.333%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+}
+
+.actionBtn {
+  padding: 9px 15px;
+  background-color: yellow;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  color: green;
+  cursor: pointer;
+}

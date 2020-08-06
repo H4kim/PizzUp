@@ -1,0 +1,12 @@
+.title {
+  font-size: 35px;
+  font-weight: 300;
+  font-family: "Oxygen", sans-serif;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Oxygen", sans-serif;
+  color: rgb(202, 202, 39);
+}

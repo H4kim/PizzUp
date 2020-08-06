@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+  height: 50px;
+  width: 40%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+  padding-left: 12px;
+  transition: ease-out 0.3s border;
+  font-size: 15px;
+}
+
+.input:focus {
+  border: 1px solid rgb(202, 202, 39);
+}
+
+.orderBtn {
+  background-color: rgb(29, 192, 37);
+  border: none;
+  padding: 18px 20px;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.marginTop {
+  margin-top: 80px;
+}

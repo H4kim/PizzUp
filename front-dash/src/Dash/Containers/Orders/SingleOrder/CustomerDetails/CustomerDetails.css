@@ -1,0 +1,32 @@
+.Details {
+  width: 48%;
+  background-color: #3797a4;
+}
+
+.header {
+  /* background-color: #3797a4; */
+  border: 1px solid black;
+  padding: 12px 0;
+  text-align: center;
+  color: white;
+}
+
+.Content {
+  /* border: 1px solid black; */
+  padding: 30px;
+  /* background-color: #3797a4; */
+  color: rgb(59, 59, 59);
+}
+
+.Content p {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.Content p span {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

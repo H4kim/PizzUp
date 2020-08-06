@@ -1,0 +1,34 @@
+.modelDisplay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.467);
+  transition: all 0.3s ease-in;
+}
+
+.displayNone {
+  display: none;
+}
+.content {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.397);
+  text-align: center;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.closeModel {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border-bottom: 5px solid orangered;
+  border-radius: 1px;
+  cursor: pointer;
+}

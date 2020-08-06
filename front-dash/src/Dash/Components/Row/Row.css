@@ -1,0 +1,25 @@
+.container {
+  background-color: rgb(185, 178, 178);
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  align-items: center;
+}
+
+p {
+  display: inline;
+  width: 150px;
+}
+
+.button {
+  background-color: #fcf776b4;
+  padding: 10px 7px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000000;
+  border-radius: 5px;
+}

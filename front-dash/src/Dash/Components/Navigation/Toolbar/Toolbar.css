@@ -1,0 +1,17 @@
+.Toolbar {
+    background-color: #3797a4;
+    height: 70px;
+    width: 100vw;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.527) ;
+    border-radius: 0 0 3px 3px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+

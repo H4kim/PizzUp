@@ -1,0 +1,19 @@
+.container {
+  margin-top: 150px;
+  margin-left: 400px;
+  width: 100%;
+}
+
+.topTables {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.cartDetails {
+  text-align: center;
+}
+
+.cartDetails h1 {
+  color: red;
+}

@@ -1,0 +1,70 @@
+.container {
+  width: 220px;
+  height: 320px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: rgba(202, 202, 39, 0.39);
+  box-shadow: 0 0 13px rgba(110, 108, 108, 0.182);
+}
+
+.image {
+  width: 120px;
+  height: 120px;
+  border-radius: 80px;
+  margin-bottom: 10px;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: gray;
+}
+
+.productPrice {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+.button {
+  padding: 11px 19px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.button.add {
+  background-color: #b4b4b4;
+  color: white;
+}
+
+.button.add:hover {
+  background-color: #8a8787;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.238);
+}
+
+.button.see {
+  color: black;
+  margin-bottom: 8px;
+  background-color: #e4e4e4;
+}
+
+.button.see:hover {
+  background-color: #d6d5d5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
