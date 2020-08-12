@@ -9,36 +9,37 @@ const CartProduct = (props) => {
     damping: 20,
     stiffness: 400,
   };
-
+  // update the state quantity from ls
   useEffect(() => {
     const ls = JSON.parse(localStorage.getItem("products"));
     let quant;
     for (let i = 0; i < ls.length; i++) {
-      if (ls[i]._id === props.id) {
+      if (ls[i]._id == props.id) {
         quant = ls[i].quantity;
       }
     }
+    // console.log(typeof quant);
     setQuantity(quant);
-  }, [props.id]);
+  }, []);
 
-  const onQuantityChange = (direction) => {
-    console.log("clicked");
+  // update local storage on quantity change
+  useEffect(() => {
     const ls = JSON.parse(localStorage.getItem("products"));
-    console.log(ls);
-
     for (let i = 0; i < ls.length; i++) {
       if (ls[i]._id === props.id) {
         ls[i].quantity = quantity;
       }
     }
-    console.log(ls);
-    if (direction === "up") {
-      setQuantity(quantity + 1);
-    } else {
-      setQuantity(quantity - 1);
-    }
-
     localStorage.setItem("products", JSON.stringify(ls));
+  }, [quantity]);
+
+  const onQuantityChange = (direction) => {
+    if (direction === "up") {
+      setQuantity((quantity) => quantity + 1);
+    } else {
+      if (quantity <= 1) return setQuantity(1);
+      setQuantity((quantity) => quantity - 1);
+    }
   };
 
   return (

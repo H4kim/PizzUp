@@ -47,7 +47,7 @@ const Home = (props) => {
         setProducts(resp.data.data);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
       });
   };
 
@@ -59,7 +59,7 @@ const Home = (props) => {
           setProducts(resp.data.data);
         })
         .catch((err) => {
-          console.log(err);
+          console.log(err.response);
         });
     }
   };
@@ -67,6 +67,12 @@ const Home = (props) => {
   const onAddToCartHandler = (prod) => {
     const ls = JSON.parse(localStorage.getItem("products"));
     //add quantity key to the ls products
+
+    for (let i = 0; i < ls.length; i++) {
+      if (ls[i]._id === prod._id) {
+        return null;
+      }
+    }
     const product = {
       ...prod,
       quantity: 1,
@@ -96,7 +102,7 @@ const Home = (props) => {
 
   return (
     <div className={classes.container}>
-      <Model isDisplayed={ModelContext.isModelDisplayed}>
+      <Model>
         <Title bold="Order">Now</Title>
         <OrderForm cartProducts={cartProducts} />
       </Model>

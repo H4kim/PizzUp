@@ -4,9 +4,7 @@ import { Route } from "react-router";
 
 import AdminLayout from "./Dash/Components/AdminLayout/AdminLayout";
 import WLayout from "./Website/Components/WLayout/WLayout";
-// import Expenses from "./Expenses/Expenses";
-// import Categories from "./Categories/Categories";
-// import Products from "./Products/Products";
+import Sign from "./Website/Containers/Sign/Sign";
 
 function App() {
   return (
@@ -15,8 +13,11 @@ function App() {
         <Route path="/admin">
           <AdminLayout />
         </Route>
-        <Route path="/">
+        <Route path="/order">
           <WLayout />
+        </Route>
+        <Route path="/sign">
+          <Sign />
         </Route>
       </Switch>
     </div>

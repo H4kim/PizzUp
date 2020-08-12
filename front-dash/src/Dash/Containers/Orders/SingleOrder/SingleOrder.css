@@ -15,5 +15,12 @@
 }
 
 .cartDetails h1 {
-  color: red;
+  color: black;
+}
+
+.orderSate {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin: 0 auto 10px auto;
 }

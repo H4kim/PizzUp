@@ -1,6 +1,25 @@
 .container {
   margin-left: 340px;
   width: 100vw;
-  padding: 190px 110px;
+  padding: 100px 110px 0 110px;
   box-sizing: border-box;
+}
+
+.navStatus {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  margin-bottom: 30px;
+}
+
+.boxStatus {
+  background-color: rgb(228, 108, 64);
+  width: 20%;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
 }

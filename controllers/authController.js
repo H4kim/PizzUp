@@ -19,6 +19,8 @@ const createSendToken = (res, user) => {
     expires: new Date(Date.now() + 7776000000),
     secure: process.env.NODE_ENV === "production",
     httpOnly: true,
+    // sameSite: "None",
+    // signed: true,
   });
 };
 
@@ -51,6 +53,7 @@ exports.login = catchAsync(async (req, res, next) => {
 
 exports.protect = catchAsync(async (req, res, next) => {
   const token = req.cookies.token;
+  console.log(token);
   if (!token)
     return next(
       new AppError("You are not logged in , please login to get access", 401)
@@ -72,3 +75,10 @@ exports.protect = catchAsync(async (req, res, next) => {
   req.user = user;
   next();
 });
+
+exports.restrictTo = (allowed) => {
+  return catchAsync(async (req, res, next) => {
+    console.log(allowed);
+    next();
+  });
+};

@@ -10,7 +10,7 @@ const WLayout = (props) => {
     <div className={classes.container}>
       <WSideBar />
       <Switch>
-        <Route path="/" exact>
+        <Route path="/order" exact>
           <HomeModelProvider>
             <Home />
           </HomeModelProvider>

@@ -1,19 +1,20 @@
-const express = require('express');
-const orderController = require('../controllers/orderController')
+const express = require("express");
+const orderController = require("../controllers/orderController");
+const authController = require("../controllers/authController");
 
+const router = express.Router();
 
-const router = express.Router({ mergeParams : true })
+router
+  .route("/")
+  .post(authController.protect, orderController.addOrder)
+  .get(orderController.getAllOrder);
 
-router.route('/')
-    .post(orderController.addOrder)
-    .get(orderController.getAllOrder)
-    
-
-router.route('/:id')
-    .get(orderController.getOneOrder)
-    .delete(orderController.deleteOrder)
-    .patch(orderController.updateOrder)
+router
+  .route("/:id")
+  .get(orderController.getOneOrder)
+  .delete(orderController.deleteOrder)
+  .patch(orderController.updateOrder);
 
 // router.post('/:id/products/:productId', orderController.addOrder)
 
-module.exports = router
+module.exports = router;

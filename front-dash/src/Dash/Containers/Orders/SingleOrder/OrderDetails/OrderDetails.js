@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./OrderDetails.css";
 const OrderDetails = (props) => {
+  const data = props.data;
   return (
     <div className={classes.Details}>
       <div className={classes.header}>
@@ -8,16 +9,16 @@ const OrderDetails = (props) => {
       </div>
       <div className={classes.Content}>
         <p>
-          Order ID : <span>545d4545s4d54545sd45</span>
+          Order ID : <span>{data.orderId}</span>
         </p>
         <p>
-          Number of Unique Item: : <span>3</span>
+          Number of Unique Item: : <span>{data.orderNum}</span>
         </p>
         <p>
-          Order Status : <span>New</span>
+          Order Status : <span>{data.status}</span>
         </p>
         <p>
-          Total Price : <span>122$</span>
+          Total Price : <span>{data.totalPrice}$</span>
         </p>
       </div>
     </div>

@@ -11,19 +11,31 @@ const CartDetails = (props) => {
     );
   });
 
-  // const or = props.orders.map((cur) => {
-  //   return 1;
-  // });
+  let rows;
+  let price;
+  if (props.order.orderDetails) {
+    rows = props.order.orderDetails.map((cur) => {
+      price = cur.quantity * cur.product.price;
+      return (
+        <div key={cur._id} className={classes.row}>
+          <div className={classes.box}>
+            <img
+              className={classes.productImg}
+              src={`http://127.0.0.1:5000/images/products/${cur.product.image}`}
+            />
+          </div>
+          <div className={classes.box}>{cur.product.name}</div>
+          <div className={classes.box}>{cur.quantity} </div>
+          <div className={classes.box}>{price} $</div>
+        </div>
+      );
+    });
+  }
 
   return (
     <div className={classes.container}>
       <div className={classes.header}>{heads}</div>
-      <div className={classes.row}>
-        <div className={classes.box}>image</div>
-        <div className={classes.box}>product name</div>
-        <div className={classes.box}>Quantity </div>
-        <div className={classes.box}>125 $</div>
-      </div>
+      {rows}
     </div>
   );
 };

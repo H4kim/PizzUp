@@ -19,6 +19,12 @@ const Order = (props) => {
 
   return (
     <div className={classes.container}>
+      <div className={classes.navStatus}>
+        <div className={classes.boxStatus}>New</div>
+        <div className={classes.boxStatus}>Prepparing</div>
+        <div className={classes.boxStatus}>Delivered</div>
+        <div className={classes.boxStatus}>Cancelled</div>
+      </div>
       <List heads={heads} data={orders} />
     </div>
   );

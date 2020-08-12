@@ -5,7 +5,7 @@ import classes from "./Model.css";
 const Model = (props) => {
   const ModelContext = useContext(HomeModelContext);
   let currentClass = classes.displayNone;
-  if (props.isDisplayed) currentClass = classes.modelDisplay;
+  if (ModelContext.isModelDisplayed) currentClass = classes.modelDisplay;
 
   const closeModel = () => {
     ModelContext.toggleModel();

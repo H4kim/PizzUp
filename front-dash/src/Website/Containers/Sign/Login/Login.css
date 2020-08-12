@@ -1,0 +1,24 @@
+.input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: none;
+  line-height: 3rem;
+  padding-left: 10px;
+  box-sizing: border-box;
+  width: 20%;
+  outline: none;
+  font-size: 17px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.loginBtn {
+  border: none;
+  padding: 15px 30px;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+}

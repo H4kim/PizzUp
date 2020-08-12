@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
     ref: "Category",
   },
   price: {
-    type: String,
+    type: Number,
     required: [true, "a product must have a price "],
   },
   featured: {

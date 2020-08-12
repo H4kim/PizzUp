@@ -4,7 +4,7 @@ const productController = require("../controllers/productController");
 
 const router = express.Router();
 
-router.use("/:id/orders", orderRoutes);
+// router.use("/:id/orders", orderRoutes);
 
 router
   .route("/")

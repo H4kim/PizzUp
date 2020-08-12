@@ -9,7 +9,7 @@ const orderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["new", "processing", "delivred"],
+    enum: ["new", "processing", "cancelled", "delivered"],
     default: "new",
     required: true,
   },
@@ -44,7 +44,7 @@ const orderSchema = new mongoose.Schema({
 });
 
 orderSchema.pre(/^find/, function () {
-  this.populate({ path: "orderDetails.product", select: "name price " });
+  this.populate({ path: "orderDetails.product", select: "name price image" });
 });
 
 orderSchema.pre("save", async function () {
