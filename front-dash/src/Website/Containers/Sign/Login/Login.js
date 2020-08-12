@@ -20,10 +20,11 @@ const Login = (props) => {
   const onLoginHandler = () => {
     Axios.post("http://127.0.0.1:5000/api/users/login", inputs, {
       credentials: "include",
+      withCredentials: true,
     })
       .then((resp) => {
         console.log(resp);
-        console.log(document);
+        console.log(document.cookie);
       })
       .catch((err) => {
         console.log("err", err.response);
@@ -34,6 +35,7 @@ const Login = (props) => {
       <h1>Sign in</h1>
       <input
         className={classes.input}
+        type="email"
         placeholder="Email address"
         onChange={(e) => onChangeHandler(e, "email")}
       />

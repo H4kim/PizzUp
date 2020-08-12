@@ -10,7 +10,7 @@
   line-height: 3rem;
   padding-left: 10px;
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
   outline: none;
   font-size: 17px;
 }
@@ -19,10 +19,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-.loginBtn {
+.registerBtn {
   border: none;
   padding: 15px 30px;
-  background-color: green;
+  background-color: red;
   color: white;
   font-size: 18px;
 }

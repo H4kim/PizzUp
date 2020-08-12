@@ -35,7 +35,10 @@ const OrderForm = (props) => {
       orderDetails,
     };
 
-    Axios.post("http://127.0.0.1:5000/api/orders", reqData)
+    Axios.post("http://127.0.0.1:5000/api/orders", reqData, {
+      credentials: "include",
+      withCredentials: true,
+    })
       .then((resp) => {
         console.log(resp);
         localStorage.setItem("products", "[]");

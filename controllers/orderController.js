@@ -20,12 +20,14 @@ exports.addOrder = catchAsync(async (req, res, next) => {
 
   const orderObj = {};
   orderObj.phone = req.body.phone;
+  orderObj.address = req.body.address;
   orderObj.orderNum = orderNumber;
   orderObj.totalPrice = totalPrice;
   orderObj.orderDetails = [...orderDetails];
 
   const order = await Order.create(orderObj);
 
+  console.log(req.user);
   res.status(201).json({
     status: "success",
     data: order,
