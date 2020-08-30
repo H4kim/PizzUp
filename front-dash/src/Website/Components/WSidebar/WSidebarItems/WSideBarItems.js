@@ -7,10 +7,10 @@ import WSidebarItem from "./WSidebarItem/WSidebarItem";
 const WSideBarItems = (props) => {
   return (
     <ul className={classes.ul}>
-      <WSidebarItem link="/">
+      <WSidebarItem link="/order">
         <HomeIcon size="40" color="black" />
       </WSidebarItem>
-      <WSidebarItem link="/myOrders">
+      <WSidebarItem link="/order/myOrders">
         <CreditCardIcon size="40" color="black" />
       </WSidebarItem>
       <WSidebarItem link="/help">

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 
 import classes from "./Home.css";
-import { HomeModelContext } from "../../Context/HomeModelContext";
+import { HomeModelContext } from "../../../Context/HomeModelContext";
 import Title from "../../Components/Title/Title";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import Categories from "../../Components/Categories/Categories";

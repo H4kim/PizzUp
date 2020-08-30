@@ -19,6 +19,7 @@ exports.addOrder = catchAsync(async (req, res, next) => {
   }
 
   const orderObj = {};
+  orderObj.user = req.user._id;
   orderObj.phone = req.body.phone;
   orderObj.address = req.body.address;
   orderObj.orderNum = orderNumber;
@@ -49,6 +50,23 @@ exports.updateOrder = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: "success",
     data: order,
+  });
+});
+
+exports.getMyOrders = catchAsync(async (req, res, next) => {
+  const userId = req.user._id;
+  const query = req.query.filter;
+  let orders;
+  if (!query) {
+    orders = await Order.find({ user: userId });
+  } else {
+    orders = await Order.find({ user: userId, status: query });
+  }
+
+  res.status(200).json({
+    status: "success",
+    result: orders.length,
+    data: orders,
   });
 });
 

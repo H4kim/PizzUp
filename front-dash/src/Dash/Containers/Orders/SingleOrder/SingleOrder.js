@@ -15,24 +15,34 @@ const SingleOrder = (props) => {
   const { params } = useRouteMatch();
 
   useEffect(() => {
-    Axios.get(`http://127.0.0.1:5000/api/orders/${params.id}`)
+    Axios.get(`http://127.0.0.1:5000/api/orders/${params.id}`, {
+      credentials: "include",
+      withCredentials: true,
+    })
       .then((resp) => {
         setOrder((order) => resp.data.data);
       })
       .catch((e) => {
-        console.log(e);
+        console.log(e.response);
       });
   }, [params.id]);
 
   useEffect(() => {
-    Axios.patch(`http://127.0.0.1:5000/api/orders/${params.id}`, {
-      status: orderState,
-    })
+    Axios.patch(
+      `http://127.0.0.1:5000/api/orders/${params.id}`,
+      {
+        status: orderState,
+      },
+      {
+        credentials: "include",
+        withCredentials: true,
+      }
+    )
       .then((resp) => {
         console.log(resp);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
       });
   }, [orderState]);
 

@@ -71,6 +71,7 @@ exports.protect = catchAsync(async (req, res, next) => {
       new AppError("The user belonging to this token is no longer exist", 401)
     );
 
+  console.log("Allowed");
   req.user = user;
   next();
 });

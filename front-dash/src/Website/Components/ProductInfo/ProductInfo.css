@@ -1,0 +1,74 @@
+.container {
+  width: 50%;
+  background-color: white;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+.backBtn {
+  color: #22389a;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.category {
+  color: #b7b7b7;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.productName {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.info {
+  width: 90%;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 100px;
+}
+
+.ingredients {
+  list-style: inside;
+  font-size: 16px;
+  margin-bottom: 120px;
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.addBtn {
+  background-color: #2c2c2c;
+  border: 1px solid transparent;
+  /* background-color: rgb(202, 202, 39); */
+  color: white;
+  padding: 20px 80px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.price {
+  font-size: 40px;
+  font-family: "The Girl Next Door", cursive;
+  font-weight: 700;
+  color: black;
+}

@@ -2,12 +2,16 @@ import React, { useState, useContext } from "react";
 import classes from "./OrderForm.css";
 import Axios from "axios";
 import { Redirect } from "react-router-dom";
-import { HomeModelContext } from "../../Context/HomeModelContext";
+import { HomeModelContext } from "../../../Context/HomeModelContext";
+import { AlertContext } from "../../../Context/AlertContext";
+import AlertMsg from "../../../utils/AlertMsg/AlertMsg";
+
 const OrderForm = (props) => {
   const [formData, setFormData] = useState({ phone: "", address: "" });
   const [redirect, setRedirect] = useState(false);
 
   const ModelContext = useContext(HomeModelContext);
+  const AlertMsgContext = useContext(AlertContext);
 
   const inputChangeHandler = (e, input) => {
     const value = e.target.value;
@@ -17,7 +21,6 @@ const OrderForm = (props) => {
         [input]: value,
       };
     });
-    console.log(formData);
   };
 
   const submitOrderHandler = (cartProducts) => {
@@ -40,19 +43,23 @@ const OrderForm = (props) => {
       withCredentials: true,
     })
       .then((resp) => {
-        console.log(resp);
         localStorage.setItem("products", "[]");
-        ModelContext.toggleModel();
-        setRedirect((prev) => !prev);
+        AlertMsgContext.toggleDisplay("green", "Order submitted successfully");
+        setTimeout(() => {
+          ModelContext.toggleModel();
+          setRedirect((prev) => !prev);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err.response);
+        AlertMsgContext.toggleDisplay("red", err.response.data.message);
       });
   };
 
   return (
     <div className={classes.form}>
-      {redirect ? <Redirect to="/myOrders" /> : null}
+      <AlertMsg />
+      {redirect ? <Redirect to="/order/myOrders" /> : null}
       <div className={classes.marginTop}></div>
       <input
         placeholder="Phone Number"

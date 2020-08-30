@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 const Product = require("../models/productModel");
 
 const orderSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: [true, "Order must belong to a user"],
+  },
   date: {
     type: String,
     default: Date.now(),

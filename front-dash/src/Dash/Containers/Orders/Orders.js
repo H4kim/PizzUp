@@ -8,12 +8,15 @@ const Order = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/api/orders")
+      .get("http://127.0.0.1:5000/api/orders", {
+        credentials: "include",
+        withCredentials: true,
+      })
       .then((res) => {
         setOrders(res.data.data);
       })
       .catch((e) => {
-        console.log(e);
+        console.log(e.response);
       });
   }, []);
 

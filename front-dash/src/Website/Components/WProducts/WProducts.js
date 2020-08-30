@@ -7,6 +7,7 @@ const WProducts = (props) => {
     return (
       <WProduct
         key={cur._id}
+        id={cur._id}
         name={cur.name}
         price={cur.price}
         image={`http://127.0.0.1:5000/images/products/${cur.image}`}

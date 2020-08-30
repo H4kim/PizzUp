@@ -14,10 +14,13 @@
   letter-spacing: 1px;
   font-size: 17px;
   color: rgba(128, 128, 128, 0.705);
+  border: 1px solid rgba(128, 128, 128, 0.326);
+  transition: all 0.1s ease-out;
 }
 
 .container:hover {
   background-color: #e6a744;
+  border: 1px solid #e6a744;
   transform: scale(1.1);
   color: white;
   font-size: 19px;

@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./WProduct.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const WProduct = (props) => {
   const spring = {
@@ -18,9 +19,12 @@ const WProduct = (props) => {
       <img src={props.image} alt={props.name} className={classes.image} />
       <p className={classes.productName}>{props.name.toUpperCase()}</p>
       <p className={classes.productPrice}>{props.price} $</p>
-      <button className={[classes.button, classes.see].join(" ")}>
+      <Link
+        to={`/order/${props.id}`}
+        className={[classes.button, classes.see].join(" ")}
+      >
         See Details
-      </button>
+      </Link>
       <button
         className={[classes.button, classes.add].join(" ")}
         onClick={props.onAddToCart}

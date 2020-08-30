@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { HomeModelContext } from "../../Context/HomeModelContext";
+import { HomeModelContext } from "../../../Context/HomeModelContext";
 
 import classes from "./Model.css";
 const Model = (props) => {

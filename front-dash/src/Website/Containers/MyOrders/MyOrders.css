@@ -1,0 +1,27 @@
+.container {
+  margin-left: 183px;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter {
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.filter:hover {
+  color: orangered;
+}
