@@ -65,7 +65,6 @@ const MyOrders = () => {
         </Link>
       </nav>
       {myOrd}
-      <Caroussel />
     </div>
   );
 };

@@ -25,12 +25,14 @@ const WProduct = (props) => {
       >
         See Details
       </Link>
-      <button
-        className={[classes.button, classes.add].join(" ")}
-        onClick={props.onAddToCart}
-      >
-        Add to Card
-      </button>
+      {props.addToCart ? (
+        <button
+          className={[classes.button, classes.add].join(" ")}
+          onClick={props.onAddToCart}
+        >
+          Add to Card
+        </button>
+      ) : null}
     </motion.div>
   );
 };

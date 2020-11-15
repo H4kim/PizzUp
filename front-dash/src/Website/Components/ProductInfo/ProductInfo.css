@@ -1,8 +1,39 @@
 .container {
   width: 50%;
+  height: 100%;
   background-color: white;
   padding: 20px 50px;
   box-sizing: border-box;
+}
+.topInfo {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartContainer {
+  position: relative;
+}
+
+.itemsNum {
+  background-color: rgb(253, 196, 91);
+  color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+.cartIcon {
+  width: 30px;
+  fill: black;
+  cursor: pointer;
 }
 
 .backBtn {
