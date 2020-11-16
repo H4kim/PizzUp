@@ -1,16 +1,16 @@
-const mongoose = require("mongoose");
-const validator = require("email-validator");
-const bcrypt = require("bcrypt");
+const mongoose = require('mongoose');
+const validator = require('email-validator');
+const bcrypt = require('bcrypt');
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "A user must have a name !"],
+    required: [true, 'A user must have a name !'],
     maxlength: 40,
     minlength: 3,
   },
   email: {
     type: String,
-    required: [true, "A user must have an email !"],
+    required: [true, 'A user must have an email !'],
     unique: true,
     lowercase: true,
     validate: {
@@ -26,18 +26,18 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: [
       true,
-      "A user must have a phone number so we can call you when your order is reay :D !",
+      'A user must have a phone number so we can call you when your order is reay :D !',
     ],
   },
   password: {
     type: String,
-    required: [true, "please provide a password "],
+    required: [true, 'please provide a password '],
     minlength: 4,
     maxlength: 60,
   },
   passwordConfirm: {
     type: String,
-    required: [true, "please confirm your password "],
+    required: [true, 'please confirm your password '],
     validate: {
       validator: function (passConfirm) {
         return passConfirm === this.password;
@@ -46,13 +46,13 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.pre("save", async function () {
+userSchema.pre('save', async function () {
   const encryptedPassword = await bcrypt.hash(this.password, 12);
 
   this.password = encryptedPassword;
   this.passwordConfirm = undefined;
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

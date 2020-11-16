@@ -73,6 +73,20 @@ exports.protect = catchAsync(async (req, res, next) => {
   next();
 });
 
+exports.isLoggedIn = catchAsync(async (req, res, next) => {
+  const token = req.cookies.token;
+  if (!token) return next()
+
+  jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, decoded) => {
+    const user = await User.findById(decoded.id)
+    if (user) {
+      console.log('User exist') 
+      return next(new AppError('You are already logged in', 401))
+    }
+    next()
+  });
+})
+
 exports.restrictTo = (allowed) => {
   return catchAsync(async (req, res, next) => {
     console.log(allowed);
