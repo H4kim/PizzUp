@@ -9,10 +9,7 @@ export default (props) => {
   const [isModelDisplayed, setIsModelDisplayed] = useState(false);
 
   const toggleModel = () => {
-    setIsModelDisplayed((prev) => {
-      const newState = !prev;
-      return newState;
-    });
+    setIsModelDisplayed((prev) => !prev)
   };
   return (
     <HomeModelContext.Provider value={{ isModelDisplayed, toggleModel }}>

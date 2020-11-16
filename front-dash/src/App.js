@@ -3,7 +3,7 @@ import { Switch } from "react-router-dom";
 import { Route } from "react-router";
 
 import AdminLayout from "./Dash/Components/AdminLayout/AdminLayout";
-import WLayout from "./Website/Components/WLayout/WLayout";
+import OrderLayout from "./Website/Components/Layouts/OrderLayout";
 import Sign from "./Website/Containers/Sign/Sign";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <AdminLayout />
         </Route>
         <Route path="/order">
-          <WLayout />
+          <OrderLayout />
         </Route>
         <Route path="/sign">
           <Sign />

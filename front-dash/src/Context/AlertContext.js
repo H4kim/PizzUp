@@ -16,7 +16,6 @@ export default (props) => {
     setBackColor((prev) => color);
     setIsAlertDisplayed(true);
     setTimeout(() => {
-      console.log("done");
       setIsAlertDisplayed(false);
     }, 2500);
   };

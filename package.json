@@ -4,7 +4,7 @@
   "description": "Restaurant management and Client part API",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js & (cd front-dash && npm start)"
   },
   "keywords": [
     "restaurant"

@@ -8,7 +8,7 @@ import AlertProvider from "../../../Context/AlertContext";
 import MyOrders from "../../Containers/MyOrders/MyOrders";
 import Product from "../../Containers/Product/Product";
 
-const WLayout = (props) => {
+const OrderLayout = (props) => {
   return (
     <div className={classes.container}>
       <WSideBar />
@@ -29,4 +29,4 @@ const WLayout = (props) => {
   );
 };
 
-export default WLayout;
+export default OrderLayout;
