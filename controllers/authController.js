@@ -89,7 +89,9 @@ exports.isLoggedIn = catchAsync(async (req, res, next) => {
 
 exports.restrictTo = (allowed) => {
   return catchAsync(async (req, res, next) => {
-    console.log(allowed);
+    const user = req.user
+    console.log(user)
+    if (user.role !== allowed) return next(new AppError('You are not allowed to perform this action', 401))
     next();
   });
 };

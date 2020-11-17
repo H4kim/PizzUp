@@ -1,18 +1,20 @@
-const AppError = require("errors-handler/appError");
-const cruds = require("../utils/cruds");
-const Order = require("../models/orderModel");
-const Product = require("../models/productModel");
-const catchAsync = require("../utils/catchAsync");
+const AppError = require('errors-handler/appError');
+const cruds = require('../utils/cruds');
+const Order = require('../models/orderModel');
+const Product = require('../models/productModel');
+const catchAsync = require('../utils/catchAsync');
 
 exports.addOrder = catchAsync(async (req, res, next) => {
   const orderDetails = req.body.orderDetails;
-  if (!orderDetails) return next(new AppError("Order list is empty"));
+  if (!orderDetails) return next(new AppError('Order list is empty'));
   let totalPrice = 0;
   let orderNumber = 0;
 
   //get the number of items (products ordred) && Total price
   let product;
-  for (i = 0; i < orderDetails.length; i++) {
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < orderDetails.length; i++) {
+    // eslint-disable-next-line no-await-in-loop
     product = await Product.findById(orderDetails[i].product);
     totalPrice += product.price * orderDetails[i].quantity;
     orderNumber += orderDetails[i].quantity;
@@ -30,7 +32,7 @@ exports.addOrder = catchAsync(async (req, res, next) => {
 
   console.log(req.user);
   res.status(201).json({
-    status: "success",
+    status: 'success',
     data: order,
   });
 });
@@ -38,7 +40,7 @@ exports.addOrder = catchAsync(async (req, res, next) => {
 exports.updateOrder = catchAsync(async (req, res, next) => {
   const order = await Order.findById(req.params.id);
 
-  if (!order) return next(new AppError("Invalid ID", 400));
+  if (!order) return next(new AppError('Invalid ID', 400));
 
   if (req.body.status) order.status = req.body.status;
   if (req.body.phone) order.phone = req.body.phone;
@@ -48,7 +50,7 @@ exports.updateOrder = catchAsync(async (req, res, next) => {
   await order.save();
 
   res.status(200).json({
-    status: "success",
+    status: 'success',
     data: order,
   });
 });
@@ -64,7 +66,7 @@ exports.getMyOrders = catchAsync(async (req, res, next) => {
   }
 
   res.status(200).json({
-    status: "success",
+    status: 'success',
     result: orders.length,
     data: orders,
   });

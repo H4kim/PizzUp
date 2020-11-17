@@ -10,13 +10,13 @@ router.get('/myOrders', authController.protect, orderController.getMyOrders);
 router
   .route('/')
   .post(authController.protect, orderController.addOrder)
-  .get(authController.protect, orderController.getAllOrder);
+  .get(authController.protect, authController.restrictTo('user'), orderController.getAllOrder); //NEED TO BE ADMIN  //BUG
 
-//ADMIN
+// Admin
 router
   .route('/:id')
-  .get(authController.protect, orderController.getOneOrder)
-  .delete(authController.protect, orderController.deleteOrder)
-  .patch(authController.protect, orderController.updateOrder);
+  .get(authController.protect, authController.restrictTo('user'), orderController.getOneOrder) //NEED TO BE ADMIN //BUG
+  .delete(authController.protect, authController.restrictTo('user'), orderController.deleteOrder) //NEED TO BE ADMIN //BUG
+  .patch(authController.protect, authController.restrictTo('user'), orderController.updateOrder); //NEED TO BE ADMIN //BUG
 
 module.exports = router;
