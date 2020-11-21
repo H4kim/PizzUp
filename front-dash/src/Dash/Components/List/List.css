@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 .header {
-  background-color: #3797a4a6;
+  background-color: #004852a6;
   display: flex;
   width: 100%;
   border-bottom: 1px solid white;
@@ -11,7 +11,7 @@
 }
 
 .row {
-  background-color: #3797a4;
+  background-color: #799ea3;
   display: flex;
   width: 100%;
   border-bottom: 1px solid white;

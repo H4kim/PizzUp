@@ -72,7 +72,7 @@ const Products = () => {
   return (
     <div className={classes.container}>
       <Table
-        tHeads={["featured", "id", "name", "price", "category", "actions"]}
+        tHeads={["featured", "id", "name", "price", "category",'image', "actions"]}
         initialState={{
           _id: "",
           name: "",

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./WSideBarItems.css";
 import HomeIcon from "../../../../assets/Svg/HomeIcon";
-import CreditCardIcon from "../../../../assets/Svg/CreditCardIcon";
+import CartIcon from "../../../../assets/Svg/CartIcon";
 import QuestionIcon from "../../../../assets/Svg/QuestionIcon";
 import WSidebarItem from "./WSidebarItem/WSidebarItem";
 const WSideBarItems = (props) => {
@@ -10,8 +10,8 @@ const WSideBarItems = (props) => {
       <WSidebarItem link="/order">
         <HomeIcon size="40" color="black" />
       </WSidebarItem>
-      <WSidebarItem link="/order/myOrders">
-        <CreditCardIcon size="40" color="black" />
+      <WSidebarItem link="/order/myorders">
+        <CartIcon size="40" color="black" />
       </WSidebarItem>
       <WSidebarItem link="/help">
         <QuestionIcon size="40" color="black" />

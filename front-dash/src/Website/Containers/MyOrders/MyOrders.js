@@ -4,12 +4,11 @@ import Axios from "axios";
 import Title from "../../Components/Title/Title";
 import classes from "./MyOrders.css";
 import MyOrder from "./MyOrder/MyOrder";
-import Caroussel from "../../../utils/Caroussel/Caroussel";
 const MyOrders = () => {
   const [myOrders, setMyOrders] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://127.0.0.1:5000/api/orders/myOrders", {
+    Axios.get("http://127.0.0.1:5000/api/orders/myorders", {
       credentials: "include",
       withCredentials: true,
     })
@@ -51,16 +50,16 @@ const MyOrders = () => {
     <div className={classes.container}>
       <Title bold="My">Orders</Title>
       <nav className={classes.nav}>
-        <Link to="/order/myOrders" className={classes.filter}>
+        <Link to="/order/myorders" className={classes.filter}>
           All
         </Link>
-        <Link to="/order/myOrders?filter=processing" className={classes.filter}>
+        <Link to="/order/myorders?filter=processing" className={classes.filter}>
           Processing
         </Link>
-        <Link to="/order/myOrders?filter=cancelled" className={classes.filter}>
+        <Link to="/order/myorders?filter=cancelled" className={classes.filter}>
           Cancelled
         </Link>
-        <Link to="/order/myOrders?filter=delivered" className={classes.filter}>
+        <Link to="/order/myorders?filter=delivered" className={classes.filter}>
           Delivered
         </Link>
       </nav>

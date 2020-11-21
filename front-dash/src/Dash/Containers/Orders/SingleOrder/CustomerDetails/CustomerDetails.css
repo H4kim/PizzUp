@@ -1,10 +1,10 @@
 .Details {
   width: 48%;
-  background-color: #3797a4;
+  /* background-color: #3797a4; */
 }
 
 .header {
-  /* background-color: #3797a4; */
+  background-color: #004852a6;
   border: 1px solid black;
   padding: 12px 0;
   text-align: center;
@@ -14,7 +14,7 @@
 .Content {
   /* border: 1px solid black; */
   padding: 30px;
-  /* background-color: #3797a4; */
+  background-color: #799ea3;
   color: rgb(59, 59, 59);
 }
 

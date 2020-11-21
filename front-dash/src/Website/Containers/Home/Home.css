@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   position: relative;
+  min-height: 100vh;
 }
 .main {
   padding: 50px 0 0 240px;

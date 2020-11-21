@@ -5,7 +5,7 @@ const authController = require('../controllers/authController');
 const router = express.Router();
 
 //USERs
-router.get('/myOrders', authController.protect, orderController.getMyOrders);
+router.get('/myorders', authController.protect, orderController.getMyOrders);
 
 router
   .route('/')

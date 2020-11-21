@@ -12,7 +12,7 @@ const Cart = (props) => {
     stiffness: 300,
   };
 
-  let orderBtn = <div>Your Products Will Appear Here </div>;
+  let orderBtn = <div className={classes.placeHolderText}>Your Orders Will Appear Here </div>;
   if (props.products.length > 0) {
     orderBtn = (
       <motion.button

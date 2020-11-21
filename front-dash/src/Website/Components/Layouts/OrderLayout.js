@@ -19,7 +19,7 @@ const OrderLayout = (props) => {
               <Home />
             </HomeModelProvider>
           </Route>
-          <Route path="/order/myOrders" exact>
+          <Route path="/order/myorders" exact>
             <MyOrders />
           </Route>
           <Route path="/order/:productId" exact component={Product} />

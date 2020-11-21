@@ -5,7 +5,7 @@
   margin: 0 auto 100px auto;
 }
 .header {
-  background-color: #3797a4a6;
+  background-color: #004852a6;
   display: flex;
   width: 100%;
   border-bottom: 1px solid rgb(3, 3, 3);
@@ -13,11 +13,11 @@
 }
 
 .row {
-  background-color: #3797a4;
+  background-color: #799ea3;
   display: flex;
   width: 100%;
   border-bottom: 1px solid rgb(0, 0, 0);
-  background-color: white;
+  /* background-color: white; */
   align-items: center;
 }
 

@@ -59,7 +59,7 @@ const OrderForm = (props) => {
   return (
     <div className={classes.form}>
       <AlertMsg />
-      {redirect ? <Redirect to="/order/myOrders" /> : null}
+      {redirect ? <Redirect to="/order/myorders" /> : null}
       <div className={classes.marginTop}></div>
       <input
         placeholder="Phone Number"
