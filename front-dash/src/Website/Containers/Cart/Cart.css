@@ -10,20 +10,23 @@
 }
 
 .orderBtn {
-  background-color: rgb(28, 165, 10);
+  /* background-color: rgb(28, 165, 10); */
+  background-color: #f89655;
   border: none;
-  padding: 18px 20px;
+  padding: 18px 20%;
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 20px;
   text-transform: uppercase;
   margin-top: 40px;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
+  border-radius: 9px;
+  font-weight: 600;
 }
 
 .orderBtn:hover {
-  background-color: rgb(29, 192, 37);
+  background-color: #ff771c;
 }
 
 .placeHolderText {

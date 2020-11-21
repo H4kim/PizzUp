@@ -12,14 +12,16 @@
   align-items: center;
   border: 1px solid rgba(128, 128, 128, 0.326);
   transition: all 0.1s ease-out;
+  color: rgba(128, 128, 128, 0.705);
 }
 
 .container:hover {
-  background-color: #e6a744;
-  border: 1px solid #e6a744;
+  background-color: #bd4d59;
+  /* border: 1px solid rgba(128, 128, 128, 0.212); */
   transform: scale(1.1);
   color: white;
   font-size: 19px;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 10px;
 }
 
 .subContainer {
@@ -37,5 +39,4 @@
   font-family: "Lobster", cursive;
   letter-spacing: 1px;
   font-size: 20px;
-  color: rgba(128, 128, 128, 0.705);
 }
