@@ -2,7 +2,8 @@ import React from "react";
 import classes from "./WSideBarItems.css";
 import HomeIcon from "../../../../assets/Icons/HomeIcon";
 import CartIcon from "../../../../assets/Icons/CartIcon";
-import QuestionIcon from "../../../../assets/Icons/QuestionIcon";
+import LogoutIcon from "../../../../assets/Icons/LogoutIcon";
+import LoginIcon from "../../../../assets/Icons/LoginIcon";
 import WSidebarItem from "./WSidebarItem/WSidebarItem";
 const WSideBarItems = (props) => {
   return (
@@ -13,8 +14,8 @@ const WSideBarItems = (props) => {
       <WSidebarItem link="/order/myorders">
         <CartIcon size="40" color="black" />
       </WSidebarItem>
-      <WSidebarItem link="/help">
-        <QuestionIcon size="40" color="black" />
+      <WSidebarItem link="/">
+        <LogoutIcon size="40" color="orangered" />
       </WSidebarItem>
     </ul>
   );
