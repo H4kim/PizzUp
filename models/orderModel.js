@@ -1,11 +1,11 @@
-const mongoose = require("mongoose");
-const Product = require("../models/productModel");
+const mongoose = require('mongoose');
+const Product = require('../models/productModel');
 
 const orderSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.ObjectId,
-    ref: "User",
-    required: [true, "Order must belong to a user"],
+    ref: 'User',
+    required: [true, 'Order must belong to a user'],
   },
   date: {
     type: String,
@@ -14,24 +14,24 @@ const orderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["new", "processing", "cancelled", "delivered"],
-    default: "new",
+    enum: ['new', 'processing', 'cancelled', 'delivered'],
+    default: 'new',
     required: true,
   },
   phone: {
     type: String,
-    required: [true, "please provide your phone number"],
+    required: [true, 'please provide your phone number'],
   },
   address: {
     type: String,
   },
   orderNum: {
     type: Number,
-    required: [true, "please provide the number of products ordred!"],
+    required: [true, 'please provide the number of products ordred!'],
   },
   totalPrice: {
     type: Number,
-    required: [true, "No Total price !"],
+    required: [true, 'No Total price !'],
   },
   orderDetails: [
     {
@@ -41,20 +41,20 @@ const orderSchema = new mongoose.Schema({
       },
       product: {
         type: mongoose.Schema.ObjectId,
-        ref: "Product",
-        required: [true, "No product Id provided"],
+        ref: 'Product',
+        required: [true, 'No product Id provided'],
       },
     },
   ],
 });
 
 orderSchema.pre(/^find/, function () {
-  this.populate({ path: "orderDetails.product", select: "name price image" });
+  this.populate({ path: 'orderDetails.product', select: 'name price image' });
 });
 
-orderSchema.pre("save", async function () {
+orderSchema.pre('save', async function () {
   //Reformat the date :
-  this.date = new Date().toISOString().replace(/T/, " ").replace(/\..+/, "");
+  this.date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 
   let productsIDs = [];
   for (i = 0; i < this.orderDetails.length; i++) {
@@ -81,6 +81,6 @@ orderSchema.pre("save", async function () {
   this.totalPrice = totalPrice;
 });
 
-const Order = mongoose.model("Order", orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order;

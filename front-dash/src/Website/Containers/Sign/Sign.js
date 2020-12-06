@@ -6,6 +6,10 @@ const Sign = () => {
   return (
     <div className={classes.container}>
       <Login />
+      <hr className={classes.separator}></hr>
+      <div className={classes.textSeparator}>
+        or
+      </div>
       <Register />
     </div>
   );

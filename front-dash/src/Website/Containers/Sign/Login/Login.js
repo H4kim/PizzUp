@@ -46,7 +46,7 @@ const Login = (props) => {
     <div className={classes.container}>
       <AlertMsg />
       {redirect ? <Redirect to='/order'/> : null }
-      <h1>Sign in</h1>
+      <h1 className={classes.title}>Sign in</h1>
       <input
         className={classes.input}
         type="email"

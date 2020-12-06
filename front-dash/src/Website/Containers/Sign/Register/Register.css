@@ -1,18 +1,30 @@
 .container {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .input {
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
-  border: none;
+  border: 1px solid transparent;
   line-height: 3rem;
-  padding-left: 10px;
+  padding-left: 20px;
   box-sizing: border-box;
   width: 100%;
   outline: none;
   font-size: 17px;
+  border-radius: 30px;
+  transition: 0.2s ease-in;
+}
+
+.input:focus {
+  border: 1px solid #e5a77f;
+}
+.input:focus::placeholder {
+  color: rgba(128, 128, 128, 0.342);
 }
 
 h1 {
@@ -22,7 +34,15 @@ h1 {
 .registerBtn {
   border: none;
   padding: 15px 30px;
-  background-color: red;
+  background-color: #e5a77f;
   color: white;
   font-size: 18px;
+  border-radius: 30px;
+  width: 30%;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.registerBtn:hover {
+  background-color: #f09355;
 }
