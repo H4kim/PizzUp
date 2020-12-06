@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./ProductInfo.css";
 import Caroussel from "../../../utils/Caroussel/Caroussel";
-import CartIcon from "../../../assets/Svg/CartIcon";
-import { set } from "mongoose";
+import CartIcon from "../../../assets/Icons/CartIcon";
 const ProductInfo = ({ product, products }) => {
   const [cartNum, setCartNum] = useState(0);
   const [needUpd, setNeedUpd] = useState(false);

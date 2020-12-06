@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./WSideBarItems.css";
-import HomeIcon from "../../../../assets/Svg/HomeIcon";
-import CartIcon from "../../../../assets/Svg/CartIcon";
-import QuestionIcon from "../../../../assets/Svg/QuestionIcon";
+import HomeIcon from "../../../../assets/Icons/HomeIcon";
+import CartIcon from "../../../../assets/Icons/CartIcon";
+import QuestionIcon from "../../../../assets/Icons/QuestionIcon";
 import WSidebarItem from "./WSidebarItem/WSidebarItem";
 const WSideBarItems = (props) => {
   return (

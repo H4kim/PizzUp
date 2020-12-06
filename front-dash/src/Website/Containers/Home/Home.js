@@ -97,7 +97,6 @@ const Home = (props) => {
 
   const onOrderHandler = () => {
     ModelContext.toggleModel();
-    console.log(ModelContext.isModelDisplayed);
   };
 
   return (

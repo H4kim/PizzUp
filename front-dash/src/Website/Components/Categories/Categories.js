@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./Categories.css";
 import Category from "./Category/Category";
-import Hot from "../../../assets/Svg/Hot";
-import Pizza from "../../../assets/Svg/Pizza";
-import Coffee from "../../../assets/Svg/Coffee";
-import Drink from "../../../assets/Svg/Drink";
-import Burger from "../../../assets/Svg/Burger";
-import Tacos from "../../../assets/Svg/Tacos";
+import Hot from "../../../assets/Icons/Hot";
+import Pizza from "../../../assets/Icons/Pizza";
+import Coffee from "../../../assets/Icons/Coffee";
+import Drink from "../../../assets/Icons/Drink";
+import Burger from "../../../assets/Icons/Burger";
+import Tacos from "../../../assets/Icons/Tacos";
 
 const Categories = (props) => {
   return (
